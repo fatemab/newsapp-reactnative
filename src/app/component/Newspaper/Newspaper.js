@@ -12,7 +12,7 @@ export default class Newspaper extends Component {
         newspaperName = `${navigation.state.params.newspaperName}`
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=70bf750895c84d9b9a0af5f8e016d78b";
         news = [];
         HttpService(url, function (data) {
